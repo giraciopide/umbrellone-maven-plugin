@@ -7,7 +7,7 @@ dependencies (direct and transitive), in a maven java 8 build.
 
 ## Maven goals
 
-1.  `generate-shade-configuration`: inspects the dependency tree and prints to stdout
+1.  `generate-conf`: inspects the dependency tree and prints to stdout
     a detailed xml fragment that can be used to configure maven-shade-plugin.
     
 2.  `shade-all`: generate a configuration for the shade plugin and calls the `shade` goal
