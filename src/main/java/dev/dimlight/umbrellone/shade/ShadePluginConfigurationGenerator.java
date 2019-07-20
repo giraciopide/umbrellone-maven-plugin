@@ -13,6 +13,9 @@ import org.apache.maven.shared.dependency.graph.DependencyNode;
 
 import javax.lang.model.SourceVersion;
 
+/**
+ * @author Marco Nicolini
+ */
 public class ShadePluginConfigurationGenerator {
 
     private final Log log;

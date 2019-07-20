@@ -7,6 +7,9 @@ import io.vavr.Tuple2;
 
 import java.util.LinkedList;
 
+/**
+ * @author Marco Nicolini
+ */
 public class MoreStrings {
 
     private MoreStrings() {}

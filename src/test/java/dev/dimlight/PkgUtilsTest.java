@@ -10,6 +10,9 @@ import org.junit.Test;
 
 import java.util.List;
 
+/**
+ * @author Marco Nicolini
+ */
 public class PkgUtilsTest {
 
     private final Log log = new SilentLog();

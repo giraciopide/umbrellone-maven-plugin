@@ -11,6 +11,8 @@ import org.apache.maven.plugins.annotations.Mojo;
 
 /**
  * Goal that inspects all dependencies and produces a configuration for the maven-shade-plugin relocation rules.
+ *
+ * @author Marco Nicolini
  */
 @Mojo( name = "generate-conf", defaultPhase = LifecyclePhase.PROCESS_SOURCES )
 public class GenerateShadePluginConfigurationMojo extends BaseMojo {

@@ -12,6 +12,8 @@ import static org.twdata.maven.mojoexecutor.MojoExecutor.*;
 
 /**
  * Goal that inspects all dependencies and produces a configuration for the maven-shade-plugin relocation rules.
+ *
+ * @author Marco Nicolini
  */
 @Mojo(name = "shade-all", defaultPhase = LifecyclePhase.PACKAGE, requiresDependencyResolution = ResolutionScope.RUNTIME)
 public class ShadeAllMojo extends BaseMojo {

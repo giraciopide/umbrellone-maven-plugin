@@ -22,8 +22,12 @@ import java.nio.charset.StandardCharsets;
 
 /**
  * Helpers to render shade plugin configuration xml fragment.
+ *
+ * @author Marco Nicolini
  */
 public class Xml {
+
+    private Xml() {}
 
     public static String render(ShadePluginConfiguration conf) {
         final String configuration = "<configuration>" +

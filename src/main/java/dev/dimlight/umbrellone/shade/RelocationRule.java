@@ -3,7 +3,9 @@ package dev.dimlight.umbrellone.shade;
 import java.util.Objects;
 
 /**
- * Represents a relocation rule
+ * Represents a relocation rule.
+ *
+ * @author Marco Nicolini
  */
 public class RelocationRule {
 

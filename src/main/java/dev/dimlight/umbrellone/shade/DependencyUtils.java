@@ -20,6 +20,8 @@ import java.util.Objects;
 
 /**
  * Methods to walk and collect all dependencies for the project.
+ *
+ * @author Marco Nicolini
  */
 public class DependencyUtils {
 
