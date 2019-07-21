@@ -19,7 +19,7 @@ Tested in Java 8: shading/relocating and Java modules (9+) are not friends anywa
 
 ## How the shade+relocating configuration is generated
 
-1.  All project dependency jar artifacts are considered (test and non-jar dependencies are skipped)
+1.  All project dependency jar artifacts are considered (test and non-jar dependencies are automatically skipped) minus the user-provided excludes
 2.  All jars are inspected to look for actual java packages
 3.  Within every jar's packages we reduce to the set of minimum packages to be relocated
     E.g. a jar providing (a.b.c, a.b.d, b.c.d) will yield only (a.b, b.c.d) to be relocated. 
