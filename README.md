@@ -3,7 +3,11 @@
 Provides plenty of shading without almost any configurability at all.
 
 More seriously, provides automatic shading + relocating for all your project runtime 
-dependencies (direct and transitive), in a maven java 8 build.
+dependencies (direct and transitive) by helping you configure (and optionally run) the standard maven-shade-plugin.
+
+The plugin is born out of the tedious work of coming up manually with configurations for the shade plugin in the use case of trying to shade away *all* depedencies of a project (if you're writing a library having no dependencies is a desiderable property). When directly using the maven plugin I always found that the safest bet is to include what you need to be shaded, rather than shade everything and trying to exclude what should not be shaded: this plugin helps you write the the necessary includes and relocation rules for the shade plugin automatically.
+
+Tested in Java 8: shading/relocating and Java modules (9+) are not friends anyway.
 
 ## Maven goals
 
