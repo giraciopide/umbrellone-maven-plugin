@@ -15,10 +15,10 @@ import org.apache.maven.plugins.annotations.Mojo;
  * @author Marco Nicolini
  */
 @Mojo( name = "generate-conf", defaultPhase = LifecyclePhase.PROCESS_SOURCES )
-public class GenerateShadePluginConfigurationMojo extends BaseMojo {
+public class GenerateShadePluginConfigurationMojo extends AbstractBaseMojo {
 
     @Override
-    public void execute() throws MojoExecutionException, MojoFailureException {
+    public void doExecute() throws MojoExecutionException, MojoFailureException {
         final Log log = getLog();
 
         final ShadePluginConfigurationGenerator confGen = new ShadePluginConfigurationGenerator(log, session, project,

@@ -16,7 +16,7 @@ import static org.twdata.maven.mojoexecutor.MojoExecutor.*;
  * @author Marco Nicolini
  */
 @Mojo(name = "shade-all", defaultPhase = LifecyclePhase.PACKAGE, requiresDependencyResolution = ResolutionScope.RUNTIME)
-public class ShadeAllMojo extends BaseMojo {
+public class ShadeAllMojo extends AbstractBaseMojo {
 
     /**
      * A prefix for the relocated packages.
@@ -28,7 +28,7 @@ public class ShadeAllMojo extends BaseMojo {
     private BuildPluginManager pluginManager;
 
     @Override
-    public void execute() throws MojoExecutionException, MojoFailureException {
+    public void doExecute() throws MojoExecutionException, MojoFailureException {
         final Log log = getLog();
 
         final ShadePluginConfigurationGenerator confGen = new ShadePluginConfigurationGenerator(log, session, project,

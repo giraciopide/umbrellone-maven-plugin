@@ -56,9 +56,9 @@ public class ShadePluginConfigurationGenerator {
 
         final List<String> rootPackages = dependencies
                 .peek(depNode -> log.info("found dependency [" + depNode.toNodeString() + "]"))
-                .map(depNode -> pkgUtils.scanForPackages(depNode))
+                .map(pkgUtils::scanForPackages)
                 .distinct()
-                .flatMap(pkgs -> pkgUtils.rootPackages(pkgs))
+                .flatMap(pkgUtils::rootPackages)
                 .distinct();
 
         rootPackages.forEach(rootPkg -> log.info("found root pkg: [" + rootPkg + "]"));
