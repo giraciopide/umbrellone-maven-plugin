@@ -1,4 +1,4 @@
-package dev.dimlight.umbrellone.mojos;
+package dev.dimlight.umbrellone.mojo;
 
 import dev.dimlight.umbrellone.shade.ShadePluginConfiguration;
 import dev.dimlight.umbrellone.shade.ShadePluginConfigurationGenerator;
@@ -24,7 +24,7 @@ public class GenerateShadePluginConfigurationMojo extends AbstractBaseMojo {
         final ShadePluginConfigurationGenerator confGen = new ShadePluginConfigurationGenerator(log, session, project,
                 dependencyGraphBuilder, io.vavr.collection.List.ofAll(reactorProjects));
 
-        final ShadePluginConfiguration conf = confGen.generateShadePluginConfiguration(relocationPrefix);
+        final ShadePluginConfiguration conf = confGen.generateShadePluginConfiguration(getArtifactFilter(), relocationPrefix);
 
         log.info("generated relocate configuration: \n\n" + Xml.render(conf));
     }

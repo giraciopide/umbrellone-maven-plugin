@@ -43,6 +43,12 @@ dependencies (direct and transitive), in a maven java 8 build.
             <relocationPrefix>SHADE.</relocationPrefix>
             <!-- version of the shade plugin to use, default is 3.2.1 -->
             <shadePluginVersion>3.2.1</shadePluginVersion>
+            <artifactSet>
+              <excludes>
+                <exclude>exclude_pattern_1</exclude>
+                <exclude>exclude_pattern_2</exclude>
+              </excludes>
+            </artifactSet>
           </configuration>
         </execution>
       </executions>
